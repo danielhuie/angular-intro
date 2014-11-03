@@ -22,7 +22,16 @@
         <main class="container" ng-app="MovieApp" ng-controller="MoviesController">
             <h1>Movies from 2014</h1>
 
-            <p><input type="search" class="form-control" ng-model="searchString" placeholder="Search for movies"></p>
+            <div class="row">
+                <div class="col-md-10">
+                    <p><input type="search" class="form-control" ng-model="searchString" placeholder="Search for movies"></p>
+                </div>
+                <div class="col-md-2">
+                    <button>Search for movies</button>
+                </div>
+            </div>
+
+
             
             <!--you can add any valid js expression in the handlebars you can add any valid js expression in the handlebars-->
             <p>{{filteredMovies.length}} {{filteredMovies.length == 1 ? 'movie' : 'movies'}}</p>
